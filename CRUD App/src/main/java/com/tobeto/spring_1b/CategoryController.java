@@ -42,6 +42,7 @@ public class CategoryController {
 
         if (existingCategory.isPresent()) {
             Category updatedCategory = existingCategory.get();
+            updatedCategory.setGender(category.getGender());
             updatedCategory.setCategoryName(category.getCategoryName());
             return new ResponseEntity<>("Kategori güncellendi", HttpStatus.OK);
         } else {
