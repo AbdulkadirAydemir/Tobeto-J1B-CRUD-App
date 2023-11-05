@@ -41,6 +41,12 @@ public class ProductController {
 
         if (existingProduct.isPresent()) {
             Product updatedProduct = existingProduct.get();
+            updatedProduct.setId(product.getId());
+            updatedProduct.setBrandName(product.getBrandName());
+            updatedProduct.setColor(product.getColor());
+            updatedProduct.setStock(product.getStock());
+            updatedProduct.setSize(product.getSize());
+            updatedProduct.setUnitPrice(product.getUnitPrice());
             updatedProduct.setProductName(product.getProductName());
             return new ResponseEntity<>("Ürün güncellendi", HttpStatus.OK);
         } else {
