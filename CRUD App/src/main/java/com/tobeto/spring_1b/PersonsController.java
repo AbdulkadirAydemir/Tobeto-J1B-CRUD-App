@@ -42,6 +42,7 @@ public class PersonsController {
 
         if (existingPerson.isPresent()) {
             Person newPerson = existingPerson.get();
+            newPerson.setId(person.getId());
             newPerson.setName(person.getName());
             newPerson.setSurname(person.getSurname());
             newPerson.setAge(person.getAge());
