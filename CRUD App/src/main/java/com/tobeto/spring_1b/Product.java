@@ -15,4 +15,9 @@ public class Product {
 
     private int id;
     private String productName;
+    private String brandName;
+    private int unitPrice;
+    private int stock;
+    private String color;
+    private String size;
 }
